@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>O-GPT</title>
+    <link rel="stylesheet" href="./static/styles/index.css" />
+  </head>
+  <body>
+    <!-- https://github.com/ollama/ollama/blob/main/docs/api.md#generate-a-chat-completion -->
+
+    <main>
+      <div id="hello-section" class="hello-dev">
+        <h1>What can I do for you today?</h1>
+      </div>
+
+      <div id="chat-thread" class="chat-container"></div>
+
+      <div class="chat-input">
+        <input id="user-query" type="text" />
+        <select name="models" id="model-select"></select>
+        <button id="chat-send">Send</button>
+      </div>
+      <span id="ollama-status"></span>
+    </main>
+  </body>
+
+  <script src="./static/scripts/index.js"></script>
+  <script src="./static/scripts/api.js"></script>
+  <script src="./static/scripts/models.js"></script>
+</html>

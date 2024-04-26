@@ -1,0 +1,111 @@
+body {
+    background-color: rgb(33, 33, 33);
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+span,
+h1 {
+    color: rgb(217, 217, 218);
+}
+
+button:disabled {
+    color: #373737 !important;
+}
+
+.top-nav {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+.hello-dev {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: rgb(217, 217, 218);
+    font-weight: bold;
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+.chat-input {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 5%;
+    background-color: #1e1e1e;
+    border-radius: 20px;
+    padding: 10px;
+    width: 32rem;
+}
+
+.chat-input input[type="text"] {
+    width: 65%;
+}
+
+.chat-input input[type="text"],
+.chat-input button,
+select,
+option {
+    border: none;
+    outline: none;
+    background: none;
+    color: #fff;
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+select {
+    width: 81px;
+}
+
+.chat-input input[type="text"] {
+    flex-grow: 1;
+    padding: 8px;
+    border-radius: 10px;
+}
+
+.chat-input button {
+    padding: 8px 16px;
+    border-radius: 10px;
+    background-color: #2f2f2f;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.chat-input button:hover {
+    background-color: #373737;
+}
+
+.main-logo {
+    width: 20%;
+    height: 20%;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.chat-container {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-37%);
+    top: 10%;
+    overflow-y: scroll;
+    height: 35rem;
+    scrollbar-width: none;
+}
+
+.chat {
+    margin-bottom: 1px;
+    align-self: flex-start;
+    max-width: 70%;
+    padding: 10px 15px;
+    width: 41rem;
+}
+
+.chat-gpt {
+    color: pink;
+}
+
+.chat-user {
+    color: rgb(217, 217, 218);
+}

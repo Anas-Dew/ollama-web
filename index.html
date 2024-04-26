@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>O-GPT</title>
+    <link rel="stylesheet" href="./static/styles/index.css" />
+  </head>
+  <body>
+    <main class="hello-dev">
+      <h1>Spark Your Creativity</h1>
+      <p>Without worrying about privacy</p>
+      <div class="chat-input">
+        <input id="user-query" type="text" />
+        <select name="models" id="model-select">
+          <option value="default">yourmodel</option>
+        </select>
+        <button id="chat-send">Send</button>
+      </div>
+    </main>
+  </body>
+
+  <script>
+    const chatSend = document.getElementById("chat-send");
+    const userQuery = document.getElementById("user-query");
+    chatSend.addEventListener("click", () => {
+      window.location.href = "/chat.html?q=" + userQuery.value;
+    });
+  </script>
+</html>
