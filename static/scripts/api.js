@@ -18,12 +18,13 @@ async function query() {
     try {
         var llmResponse = "";
         chatSend.disabled = true;
-        chatThread.innerHTML += `<div class="chat chat-gpt">...</div>`
+        chatThread.innerHTML += `<div class="chat chat-gpt">></div>`
         const response = await fetch("http://localhost:11434/api/chat", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
             },
+            mode: "cors",
             body: JSON.stringify({
                 model: currentModel,
                 messages: chatHistory,
@@ -32,7 +33,7 @@ async function query() {
         });
 
         // Clear loading before adding actual value.
-        chatThread.lastChild.innerText = "";
+        // chatThread.lastChild.innerText = "";
         const reader = response.body.getReader();
         let { value, done } = await reader.read();
         while (!done) {
@@ -42,20 +43,23 @@ async function query() {
 
             llmResponse += `${resObj.message.content}`;
             chatThread.lastChild.innerText += `${resObj.message.content}`;
-
+            
             if (resObj.done) {
+                chatThread.lastChild.innerText += `\n\n`;
                 chatHistory.push({
                     content: llmResponse,
                     role: "assistant",
                 });
                 break;
             }
+            chatThread.scrollTo(0, 99999)
 
         }
     } catch (error) {
         console.error("Error:", error.message);
     } finally {
         chatSend.disabled = false;
+
     }
 }
 

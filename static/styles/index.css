@@ -54,6 +54,10 @@ option {
     font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
 
+option {
+    color: #1e1e1e;
+}
+
 select {
     width: 81px;
 }
