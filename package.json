@@ -1,0 +1,27 @@
+{
+  "name": "ollama-web",
+  "version": "1.0.1",
+  "description": "Use Ollama From The Web Browser",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "bin": {
+    "ollamaweb": "./server.js"
+  },
+  "keywords": [
+    "ollama",
+    "Anas-Dew",
+    "ollama-web",
+    "localllm"
+  ],
+  "author": "Anas Dew",
+  "license": "ISC",
+  "preferGlobal": true,
+  "dependencies": {
+    "express": "^4.19.2",
+    "open": "^10.1.0",
+    "path": "^0.12.7"
+  }
+}

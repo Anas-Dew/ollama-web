@@ -4,7 +4,6 @@ async function listAllModels() {
         headers: {
             "Content-Type": "application/json",
         },
-        mode: "cors",
     });
     const result = await response.json();
     avaiableModels = result.models;

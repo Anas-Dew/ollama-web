@@ -7,24 +7,25 @@
     <link rel="stylesheet" href="./static/styles/index.css" />
   </head>
   <body>
-    <main class="hello-dev">
-      <h1>Spark Your Creativity</h1>
-      <p>Without worrying about privacy</p>
+    <!-- https://github.com/ollama/ollama/blob/main/docs/api.md#generate-a-chat-completion -->
+
+    <main>
+      <div id="hello-section" class="hello-dev">
+        <h1>What can I do for you today?</h1>
+      </div>
+
+      <div id="chat-thread" class="chat-container"></div>
+
       <div class="chat-input">
         <input id="user-query" type="text" />
-        <select name="models" id="model-select">
-          <option value="default">yourmodel</option>
-        </select>
+        <select name="models" id="model-select"></select>
         <button id="chat-send">Send</button>
       </div>
+      <span id="ollama-status"></span>
     </main>
   </body>
 
-  <script>
-    const chatSend = document.getElementById("chat-send");
-    const userQuery = document.getElementById("user-query");
-    chatSend.addEventListener("click", () => {
-      window.location.href = "/chat.html?q=" + userQuery.value;
-    });
-  </script>
+  <script src="./static/scripts/index.js"></script>
+  <script src="./static/scripts/api.js"></script>
+  <script src="./static/scripts/models.js"></script>
 </html>

@@ -24,7 +24,6 @@ async function query() {
             headers: {
                 "Content-Type": "application/json",
             },
-            mode: "cors",
             body: JSON.stringify({
                 model: currentModel,
                 messages: chatHistory,

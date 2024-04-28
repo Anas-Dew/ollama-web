@@ -34,7 +34,6 @@ window.onload = async () => {
             headers: {
                 "Content-Type": "application/json",
             },
-            mode: "cors",
         });
         if (response.ok) {
             const result = await response.text(); // Parse JSON
